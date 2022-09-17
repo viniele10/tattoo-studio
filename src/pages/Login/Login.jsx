@@ -16,12 +16,12 @@ function Login() {
           <label>senha:</label>
           <input type='text'></input>
           <br></br>
-          <Link className = 'navbar' to='/agenda'>Entrar</Link>
+          <Link className = 'navbar' to='/Agenda'>Entrar</Link>
         </form>
 
         <Routes>
 
-           <Route path='/agenda'element ={<Agenda/>}/>
+           <Route path='/Agenda'element ={<Agenda/>}/>
         </Routes>
       </div>
       

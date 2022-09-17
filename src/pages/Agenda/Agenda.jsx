@@ -34,9 +34,10 @@ function Agenda() {
          <Link className = 'navbar' to='/materiais'>Materiais</Link>
 
         <h1> Calendário de agendamentos:</h1>
+        <p>{dados.agendamentos}</p>
 
         <Routes>
-             <Route path='/Materiais'element ={<Materiais/>}/>
+             <Route path='/materiais'element ={<Materiais/>}/>
 
         </Routes>
        
