@@ -11,9 +11,9 @@ function Login() {
       <div>
         <h1> Área do Tatuador</h1>
         <form>
-          <label>username:</label>
+          <label>E-mail:</label>
           <input type='text'></input>
-          <label>senha:</label>
+          <label>Senha:</label>
           <input type='text'></input>
           <br></br>
           <Link className = 'navbar' to='/Agenda'>Entrar</Link>
