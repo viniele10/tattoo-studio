@@ -1,7 +1,4 @@
 import React from 'react';
-import {Route, Routes, Link} from "react-router-dom";
-import Agenda from "../Agenda/Agenda.jsx";
-
 
 
 function Login() {
@@ -16,13 +13,9 @@ function Login() {
           <label>senha:</label>
           <input type='text'></input>
           <br></br>
-          <Link className = 'navbar' to='/Agenda'>Entrar</Link>
+          <button>Entrar</button>
         </form>
 
-        <Routes>
-
-           <Route path='/Agenda'element ={<Agenda/>}/>
-        </Routes>
       </div>
       
     )

@@ -12,11 +12,9 @@ ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
       <App >
-        <Login>
-       </Login>
-       <Agenda>
-             <Materiais/>
-          </Agenda>
+        <Login/>
+        <Agenda/>
+        <Materiais/>
       </App>
     
     </BrowserRouter>

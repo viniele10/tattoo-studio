@@ -1,6 +1,10 @@
-
 form{
     display: flex;
     flex-direction: column;
 
+}
+.tatuadores{
+    display: flex;
+    border: 1px solid white;
+    justify-content: space-evenly;
 }

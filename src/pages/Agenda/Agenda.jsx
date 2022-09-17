@@ -1,7 +1,5 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import {Route, Routes, Link} from "react-router-dom";
-import  Materiais  from "../Materiais/Materiais";
 
 
 function Agenda() {  
@@ -31,16 +29,15 @@ function Agenda() {
 
     return (
       <div>
-         <Link className = 'navbar' to='/materiais'>Materiais</Link>
 
         <h1> Calendário de agendamentos:</h1>
-        <p>{dados.agendamentos}</p>
+        <div>
+   
 
-        <Routes>
-             <Route path='/materiais'element ={<Materiais/>}/>
 
-        </Routes>
-       
+        </div>
+
+        
   
       </div>
     
