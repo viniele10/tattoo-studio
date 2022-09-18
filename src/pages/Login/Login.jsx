@@ -1,32 +1,65 @@
-import React from 'react';
-import {Route, Routes, Link} from "react-router-dom";
-import Agenda from "../Agenda/Agenda.jsx";
-
-
+import React from "react";
+import { useState } from "react";
+import HeaderHome from "../../components/Header/HeaderHome";
+import Footer from "../../components/Footer/Footer";
+import "./Login.css";
+import Input from "../../components/Form/Input";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  return (
+    <div className="bg-01">
+      <div className="container">
+        <HeaderHome />
+        <div className="container-login">
+          <div className="wrap-login">
+            <form className="login-form">
+              <span className="login-form-title">LOGIN</span>
 
-    return (
-      <div>
-        <h1> Área do Tatuador</h1>
-        <form>
-          <label>E-mail:</label>
-          <input type='text'></input>
-          <label>Senha:</label>
-          <input type='text'></input>
-          <br></br>
-          <Link className = 'navbar' to='/Agenda'>Entrar</Link>
-        </form>
+              <div className="wrap-input">
+                <Input type="email" className={email !== "" ? "has-val input" : "input"}
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}/>
+                <span className="focus-input" data-placeholder="E-mail"></span>
+              </div>
 
-        <Routes>
+              <div className="wrap-input">
+                {/* <input
+                  className={password !== "" ? "has-val input" : "input"}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                /> */}
+                <Input type="password" className={password !== "" ? "has-val input" : "input"}
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}/>
+               
+                <span
+                  className="focus-input"
+                  data-placeholder="Password"
+                ></span>
+              </div>
 
-           <Route path='/Agenda'element ={<Agenda/>}/>
-        </Routes>
+              <div className="container-login-form-btn">
+                <button className="login-form-btn btn">Confirmar</button>
+              </div>
+
+              <div className="text-center">
+                <span className="txt1">
+                  <a className="txt2" href="#">
+                    Esqueceu a senha?
+                  </a>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      
-    )
-  }
-  
-  export default Login;
-  
+      <Footer />
+    </div>
+  );
+}
+
+export default Login;

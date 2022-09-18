@@ -1,4 +1,10 @@
+
+
 form{
     display: flex;
     flex-direction: column;
+}
+
+.form {
+    color:#fff;
 }

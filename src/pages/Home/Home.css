@@ -1,6 +1,7 @@
 .bg-main-home {
   height: 100vh;
-  /* background-image: url("../../images/home-bg.jpg"); */
+  background-color: #212121;
+  background-image: url("../../images/home-bg.jpg");
   background-position: center center;
   /* background-attachment: fixed; */
   background-repeat: no-repeat, no-repeat;
@@ -58,7 +59,7 @@
   background-color: #212121;
   border-radius: 40px 0 40px 0;
   text-align: center;
-  color: #f0f0f0;
+  color: var(--cor-w01);
   /* border: #ff004c86 1px solid; */
   font-family: inherit;
   z-index: 1;
@@ -137,5 +138,30 @@ h3 {
 .contato-container {
   display: grid;
   grid-template-columns: 1fr 10fr;
-  gap: 5rem;
+  place-items: center;
+}
+
+.endereco {
+  color: #f0f0f0d7;
+  margin-top: 0.5rem;
+}
+
+.contato-redesocial {
+  color: #f0f0f0d7;
+}
+
+.contato-redesocial strong {
+  font-weight: 500;
+  color: #575656;
+}
+
+.contato-redesocial li {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.contato-info {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
