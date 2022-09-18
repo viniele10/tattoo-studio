@@ -15,13 +15,13 @@ function Agendamento() {
   const [date, setData] = useState('');
   const [horario, setHorario] = useState('');
   const [descricao, setDescricao] = useState('');
-  const tatuador_id = 4
-  const cliente_id = 4
   let dataFormat = new Date (date);
   let data = ((dataFormat.getDate() + 1) + "-" + (dataFormat.getMonth() + 1) + "-" + dataFormat.getFullYear())
 
   const [preco, setValor] = useState('grande');
   const [id, setId] = useState(6);
+
+  const cliente_id = id
 
   function onChangeValue(event) {
     setValor(event.target.value);
@@ -29,9 +29,8 @@ function Agendamento() {
   }
 
   const postData = (e) => {
-    setId(id + 1)
-    console.log(id)
     e.preventDefault()
+    setId(id + 1)
     axios.post(`https://tattoo-api-squad7-resilia.herokuapp.com/clients`, {
       id,
       name,
@@ -44,7 +43,7 @@ function Agendamento() {
       descricao,
       data, 
       horario, 
-      tatuador_id,
+      tatuador,
       cliente_id, 
       preco
 
