@@ -26,13 +26,17 @@
 
 .wrap-login {
   width: 390px;
-  overflow: hidden;
+  /* overflow: hidden; */
   /* padding: 77px 55px 33px 55px; */
 }
+
+/* 
 
 .login-form {
   width: 100%;
 }
+
+*/
 
 .login-form-title {
   display: block;
