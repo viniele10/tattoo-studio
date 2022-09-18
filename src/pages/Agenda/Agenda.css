@@ -1,0 +1,27 @@
+*{
+    background-color: black;
+}
+.cardDiv{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+
+
+}
+.pesquisar{
+width: 1000px;
+height: 50px;
+left: 189px;
+top: 196px;
+background: rgba(200, 200, 200, 0.3);
+border-radius: 20px;
+}
+
+.pesquisa{
+    display: flex;
+    justify-content: center;
+}
+.agenda{
+    min-height: 1000px;
+}

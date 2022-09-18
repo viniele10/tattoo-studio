@@ -4,7 +4,7 @@ import App from './App'
 import Login from './pages/Login/Login';
 import Agenda from './pages/Agenda/Agenda';
 import Materiais from "./pages/Materiais/Materiais";
-import './index.css'
+import './styles/global.css'
 import {BrowserRouter} from "react-router-dom";
 
 

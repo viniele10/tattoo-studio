@@ -1,6 +1,8 @@
 import React from 'react';
 import { useState, useEffect } from 'react';
-import Card from "../../components/Card";
+import Card from "../../components/Cards/CardAgenda";
+import "./Agenda.css";
+import HeaderAgenda from '../../components/Header/HeaderAgenda';
 
 
 function Agenda() {  
@@ -15,7 +17,7 @@ function Agenda() {
       let res = await fetch (url)
       let data = await res.json()
       console.log(data)
-      setDados(...dados, ...data.agendamentos)
+      setDados([...dados, ...data.Agendamentos])
     }catch(erro){
       console.log(erro)
     }
@@ -29,26 +31,36 @@ function Agenda() {
 
 
     return (
-      <div>
+      <div className='agenda'>
+        <HeaderAgenda/>
 
-        <h1> Calendário de agendamentos:</h1>
+        <br></br>
+        <div className='pesquisa'>
+            <input placeholder='  Pesquisar' className='pesquisar' type='text'></input>
+
+        </div>
+        <br></br>
+        <br></br>
+       
         <div>
         <div className="cardDiv">
         {dados?.map((item) => (
             (<Card 
-              id={item.id}
-              descricao={item.descricao}
-              data={item.data}
-              horario={item.horario}
-              tatuador_id={item.tatuador_id}
-              cliente_id={item.cliente_id}
-              preco={item.preco}
+              id={item.ID}
+              descricao={item.DESCRICAO}
+              data={item.DATA}
+              horario={item.HORARIO}
+              tatuador_id={item.TATUADOR_ID}
+              cliente_id={item.CLIENTE_ID}
+              preco={item.PRECO}
             />
             
             
           )
       ))}
         
+          
+      
         
       </div>
    
@@ -56,6 +68,7 @@ function Agenda() {
 
         </div>
 
+<br></br><br></br><br></br>
         
   
       </div>

@@ -2,6 +2,7 @@ import React from 'react';
 import "./Agendamento.css";
 import axios from 'axios';
 import { useState } from 'react'
+import Header from "../../components/Header/HeaderAgenda";
 
 
 
@@ -48,16 +49,17 @@ function Agendamento() {
       preco
 
     })
+    alert("Agendamento feito!")
     
   }
 
 
     return (
       <div>
+        <Header/>
+        <h1> FAÇA SEU AGENDAMENTO</h1>
         <div className='form'>
         <form>
-        <h1> Marque seu horário:</h1>
-
           <label>Nome:</label>
           <input placeholder='Nome' onChange={(e) => setNome(e.target.value)} type="text"></input>
           <label>Contato:</label>
@@ -104,6 +106,8 @@ function Agendamento() {
         </form>
 
         </div>    
+        <br></br>
+        <br></br>
       </div>
       
     )
