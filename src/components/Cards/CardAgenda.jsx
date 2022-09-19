@@ -1,6 +1,6 @@
 import React from 'react';
 import "./CardAgenda.css";
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import axios from 'axios';
 
 
@@ -17,7 +17,6 @@ export default function Card (props){
 
     let dataFormat = new Date (date);
     let data = ((dataFormat.getDate() + 1) + "-" + (dataFormat.getMonth() + 1) + "-" + dataFormat.getFullYear())
-  
 
 
     const updateData = (e) => {
@@ -35,17 +34,19 @@ export default function Card (props){
       }
     
 
-      const deleteData = ( id) => {
-        axios.delete(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamento/${id}`, {
+      
+
+      const deleteData = (id) => {
+        axios.delete(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamento/${id}`)
 
 
-      })
+      }
 
-}
+
 
     return (
         <div className='agendamentos'>
-            <button onClick={deleteData(props.id)} className='x'>X</button>
+            <button onClick={deleteData()} className='x'>X</button>
             <div className="agenda1">
             {!confirm ? <h2>✅ </h2> : null}
                 <h6>ID: {props.id}</h6>

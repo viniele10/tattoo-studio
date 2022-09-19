@@ -2,11 +2,14 @@ import React from 'react';
 import { useState, useEffect } from 'react';
 import Card from "../../components/Cards/CardAgenda";
 import "./Agenda.css";
+import axios from 'axios';
 import HeaderAgenda from '../../components/Header/HeaderAgenda';
 
 
 function Agenda() {  
   const [ dados, setDados ] = useState([])
+  const [id, setId] = useState(0)
+  const [agendamento, setAgendamento] = useState([])
 
 
 
@@ -24,9 +27,18 @@ function Agenda() {
 
   }
 
-  useEffect(() => {
-    getApi();}, []);
 
+  const getId = () => {
+    axios
+    .get(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos/${id}`)
+    .then((res) => {
+      setAgendamento(res.data)
+
+    })
+  }
+
+  useEffect(() => {
+    getApi(), getId();}, []);
 
 
 
@@ -36,7 +48,7 @@ function Agenda() {
 
         <br></br>
         <div className='pesquisa'>
-            <input placeholder='  Pesquisar' className='pesquisar' type='text'></input>
+            <input placeholder='  Pesquisar'  onChange={(e) => setId(e.target.value)} className='pesquisar' type='text'></input>
 
         </div>
         <br></br>

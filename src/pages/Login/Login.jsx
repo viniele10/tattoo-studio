@@ -1,28 +1,63 @@
-import React from 'react';
-
-
+import React from "react";
+import { useState } from "react";
+import HeaderAgenda from "../../components/Header/HeaderAgenda";
+import Footer from "../../components/Footer/Footer";
+import "./Login.css";
 
 function Login() {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
 
+  return (
+    <>
+      <div className="container">
+        <HeaderAgenda/>
+        <div className="container-login">
+          <div className="wrap-login">
+            <form className="login-form">
+              <span className="login-form-title">LOGIN</span>
 
-    return (
-      <div>
-        <h1> Área do Tatuador</h1>
-        <form>
-          <label>E-mail:</label>
-          <input type='text'></input>
-          <label>Senha:</label>
-          <input type='text'></input>
-          <br></br>
-          <button>Entrar</button>
-        
+              <div className="wrap-input">
+                <input
+                  className={email !== "" ? "has-val input" : "input"}
+                  type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
+                />
+                <span className="focus-input" data-placeholder="E-mail"></span>
+              </div>
 
-        </form>
+              <div className="wrap-input">
+                <input
+                  className={password !== "" ? "has-val input" : "input"}
+                  type="password"
+                  value={password}
+                  onChange={(e) => setPassword(e.target.value)}
+                />
+                <span
+                  className="focus-input"
+                  data-placeholder="Password"
+                ></span>
+              </div>
 
+              <div className="container-login-form-btn">
+                <button className="login-form-btn">Confirmar</button>
+              </div>
+
+              <div className="text-center">
+                <span className="txt1">
+                  <a className="txt2" href="#">
+                    Esqueceu a senha?
+                  </a>
+                </span>
+              </div>
+            </form>
+          </div>
+        </div>
       </div>
-      
-    )
-  }
-  
-  export default Login;
-  
+      <Footer />
+    </>
+  );
+}
+
+export default Login;
