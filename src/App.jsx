@@ -9,31 +9,22 @@ import Materiais from "./pages/Materiais/Materiais.jsx";
 import "./styles/global.css";
 
 function App() {
-  
   return (
     <div className="App">
-
-      <header className= 'nav' >
+      {/* <header className= 'nav' >
         <Link className = 'navbar' to='/'>Home</Link>
         <Link className = 'navbar' to='/agendamento'>Agendamento</Link>
         <Link className = 'navbar' to='/login'>Login</Link>
+      </header> */}
 
-
-
-
-      </header>
       <Routes>
-      <Route path='/'element ={<Home/>}/>
-      <Route path='/agendamento'element ={<Agendamento/>}/>
-      <Route path='/login/*'element ={<Login/>}/>
-      <Route path='/materiais/*'element ={<Materiais/>}/>
-
+        <Route path="/" element={<Home />} />
+        <Route path="/agendamento" element={<Agendamento />} />
+        <Route path="/login/*" element={<Login />} />
+        <Route path="/materiais" element={<Materiais />} />
       </Routes>
-      
-
-      
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
