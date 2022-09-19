@@ -1,5 +1,20 @@
 @import "./reset.css";
 
+
+:root {
+  --cor-w0: #ffffff;
+  --cor-w1: #f0f0f0d7;
+  --cor-b0: #000;
+  --cor-b1: #121212;
+  --cor-b2: #1e1e1e;
+  --cor-b3: #403e3e;
+  --cor-details0: #FF004C;
+  --cor-details1: blueviolet;
+
+  --font-family: "Inter", sans-serif;
+}
+
+
 .container {
   max-width: 1250px; 
   padding: 1rem 4rem;
@@ -7,7 +22,7 @@
 }
 
 body {
-    font-family: Inter, sans-serif;
+    font-family: var(--font-family);
 }
 
 
@@ -25,33 +40,31 @@ body {
   background-color: rgba(255, 255, 255, 0.096);
 }
 
-header {
-  background-color: transparent;
+.bg-0 {
+  background-color: var(--cor-b0);
 }
 
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-}
-
-ul {
-  display: flex;
-  gap: 3rem;
-  align-items: center;
-}
-
-nav li, nav li a{
-    color: white;
-}
-
-.bg {
-  background-color: #000;
+.bg-01{
+  background: var(--cor-b1);
 }
 
 .bg-02 {
-  background: #121212;
-  padding-top: 4rem;
-  padding-bottom: 4rem;
+  background: var(--cor-b2);
+}
+
+.bg-03 {
+  background-color: var(--cor-b3);
+}
+
+.bg-04 {
+  background-color: var(--cor-b4);
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.padding-container {
+  padding-top: 8rem;
+  padding-bottom: 8rem;
 }

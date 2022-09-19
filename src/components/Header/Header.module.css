@@ -1,0 +1,119 @@
+.header {
+  background-color: transparent;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headerUl {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header nav li,
+nav li a {
+  color: white;
+}
+
+.header nav li:hover,
+nav li a:hover {
+  color: #ff004c;
+}
+
+.mobileButton {
+  background-color: transparent;
+  border-radius: 50rem;
+  height: 40px;
+  width: 40px;
+  padding: 0px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.mobileButton::after {
+  content: '';
+  display: block;
+  width: 1.2rem;
+  height: 2px;
+  border-radius: 2px;
+  padding: 0rem;
+  background-color: var(--cor-w0);
+  box-shadow: 0 6px var(--cor-w0), 0 -6px var(--cor-w0);
+  transition: 0.2s;
+}
+
+.mobileButton:focus,
+.mobileButton:hover,
+.mobileButtonActive {
+  outline: none;
+  background: rgba(131, 131, 131, 0.322);
+}
+
+.mobileButtonActive::after {
+  transform: rotate(-90deg);
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 8px var(--cor-w0), 0 -8px var(--cor-w0);
+}
+
+
+/* .mobileButtonActive {
+  outline: none;
+  box-shadow: 0 0 0 1px var(--cor-w0);
+  border: 0 solid;
+  border-color: var(--cor-w0);
+  color: var(--cor-details0);
+} */
+
+.navMobile {
+  text-align: center;
+  width: 35%;
+  background-color: rgba(255, 255, 255, 0.493);
+  padding: 1rem 3rem;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  box-shadow: 0 1px 2px rgba(0, 0 ,0, .2);
+  border-radius: .5rem;
+  transform: translateX(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navMobileActive {
+  transition: .3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
+.navMobile li {
+  width: 100%;
+  background-color: none;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.267);
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.navMobile li:hover {
+  color: var(--cor-details1);
+}
+
+
+.navMobileAgenda {
+  border: none;
+  font-family: Inter, sans serif;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--cor-w0);
+}
