@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 30 30" width="24px" height="24px">
+<defs>
+<filter id="alpha" filterUnits="objectBoundingBox" x="0%" y="0%" width="100%" height="100%">
+  <feColorMatrix type="matrix" in="SourceGraphic" values="0 0 0 0 1 0 0 0 0 1 0 0 0 0 1 0 0 0 1 0"/>
+</filter>
+<mask id="mask0">
+  <g filter="url(#alpha)">
+<rect x="0" y="0" width="30" height="30" style="fill:rgb(0%,0%,0%);fill-opacity:0.35;stroke:none;"/>
+  </g>
+</mask>
+<image id="image246278916" width="31" height="31" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAB8AAAAfCAYAAAAfrhY5AAAABmJLR0QA/wD/AP+gvaeTAAABYUlEQVRIie3Wv07CUBQG8O87Wspg/Jc4OhjYHUh8BR/AxaRLF+AdYNYXYIGbjs4ODgZXJ5cuaOJSn8BEgw6Y0HIdIMaWUoppdbDfeM5Nf/f2NukBivxBuGxBo9HYmkwmVZI7aR6otX4VEU8pNfwx3mw2D7XWZwCOAayngb/FJ9kPgqDtOM5gJbxer5+QvABQXhGN5oOk1ev1LlPhsxPfZQB/bQDAkVLqPtqQaGH2qrOCAaBM8jyuETq5bdvbpVLpGavf8bKMAexFP8LQyU3TrOYAA4ABoBIthnCSGznAU0hkMxH/7RR4gRf4P8N933/P0ZobLkK4iHiY/gSyztgwjKdEXCk1JHmTA97vdDpviTgABEHQxnQAyCojEWnFNeZwx3EGJK2MNjDSWlvdbvchrrkWV3Rd97FWq12R3AdwsGhdQsYArkXkVCl1u2hRqtEZQEVrvZtGJflimqYXd8dFinwCPjFlfTP4GHwAAAAASUVORK5CYII="/>
+</defs>
+<g id="surface246278912">
+<use xlink:href="#image246278916" mask="url(#mask0)"/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40.000001%,40.000001%,40.000001%);fill-opacity:1;" d="M 15 8.75 C 11.546875 8.75 8.75 11.546875 8.75 15 C 8.75 18.453125 11.546875 21.25 15 21.25 C 18.453125 21.25 21.25 18.453125 21.25 15 C 21.25 11.546875 18.453125 8.75 15 8.75 Z M 15 18.75 C 12.929688 18.75 11.25 17.070312 11.25 15 C 11.25 12.929688 12.929688 11.25 15 11.25 C 17.070312 11.25 18.75 12.929688 18.75 15 C 18.75 17.070312 17.070312 18.75 15 18.75 Z M 15 18.75 "/>
+<path style=" stroke:none;fill-rule:nonzero;fill:rgb(40.000001%,40.000001%,40.000001%);fill-opacity:1;" d="M 22.5 8.75 C 22.5 9.441406 21.941406 10 21.25 10 C 20.558594 10 20 9.441406 20 8.75 C 20 8.058594 20.558594 7.5 21.25 7.5 C 21.941406 7.5 22.5 8.058594 22.5 8.75 Z M 22.5 8.75 "/>
+</g>
+</svg>

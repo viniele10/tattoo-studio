@@ -1,11 +1,12 @@
-import React from 'react';
-import './App.css';
-import {Route, Routes, Link} from "react-router-dom";
+import React from "react";
+import { Route, Routes} from "react-router-dom";
 
 import Home from "./pages/Home/Home.jsx";
 import Agendamento from "./pages/Agendamento/Agendamento.jsx";
 import Login from "./pages/Login/Login.jsx";
 
+import Materiais from "./pages/Materiais/Materiais.jsx";
+import "./styles/global.css";
 
 function App() {
   
@@ -25,7 +26,7 @@ function App() {
       <Route path='/'element ={<Home/>}/>
       <Route path='/agendamento'element ={<Agendamento/>}/>
       <Route path='/login/*'element ={<Login/>}/>
-
+      <Route path='/materiais/*'element ={<Materiais/>}/>
 
       </Routes>
       
