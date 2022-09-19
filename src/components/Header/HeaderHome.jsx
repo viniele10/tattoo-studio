@@ -6,6 +6,7 @@ import Logo from "../../images/logo.svg";
 import { HashLink } from 'react-router-hash-link';
 import useMedia from "../../hooks/useMedia";
 import styles from './Header.module.css'
+import './Header.module.css';
 
 function HeaderHome(props) {
 
@@ -16,7 +17,6 @@ function HeaderHome(props) {
   },[pathname])
 
   const mobile = useMedia('(max-width: 700px)')
-  // console.log(mobile)
 
   return (
     <div className="container">

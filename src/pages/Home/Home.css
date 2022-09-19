@@ -31,11 +31,13 @@
   place-items: end;
 }
 
+.main-home button {
+  font-size: 1.5rem;
+}
+
 .title-session {
   -webkit-text-stroke: 1px white;
   color: transparent;
-  /* writing-mode: vertical-lr;
-  transform: rotate(180deg); */
   font-size: 5rem;
   text-align: center;
   font-style: italic;
@@ -43,7 +45,7 @@
 
 .tatuadores {
   display: grid;
-  place-content: center; 
+  place-content: center;
   gap: 5rem;
 }
 
@@ -51,6 +53,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
+  padding: 0 2rem;
 }
 
 .card {
@@ -164,4 +167,88 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+@media (max-width: 860px) {
+  .cards {
+    gap: 2rem;
+  }
+  iframe {
+    width: 500px;
+  }
+  .titulo h1 {
+    font-size: 5rem;
+  }
+  .main-home {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .main-home {
+    place-items: center;
+  }
+  .tattoo-title {
+    margin-left: 8rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  iframe {
+    width: 300px;
+  }
+  .contato-info {
+    display: grid;
+    gap: 1rem;
+  }
+  .title-session {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .titulo h1 {
+    font-size: 4rem;
+  }
+  .main-home {
+    gap: 0;
+  }
+  iframe {
+    width: 200px;
+    height: 200px;
+  }
+  .contato-container h2 {
+    font-size: 4rem;
+  }
+  .title-session {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .titulo h1 {
+    font-size: 3rem;
+  }
+  .tattoo-title {
+    margin-left: 2.2rem;
+  }
+  .main-home {
+    gap: 0;
+  }
+  .title-session {
+    font-size: 2.5rem;
+  }
+  .contato-container h2 {
+    font-size: 2.5rem;
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    margin-bottom: 5rem;
+  }
+  .contato-container {
+    grid-template-columns: 1fr;
+  }
+  .main-home button {
+    font-size: 1rem;
+  }
 }

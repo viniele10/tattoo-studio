@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import useMedia from "../../hooks/useMedia";
 
 
 import HeaderHome from "../../components/Header/HeaderHome";
@@ -14,7 +15,7 @@ import "./Home.css";
 
 function Home() {
 
-  
+  // const mobile = useMedia('(max-width: 860px)')
 
   return (
     <>
@@ -28,7 +29,7 @@ function Home() {
             </h1>
           </div>
           <Link to="/agendamento">
-            <button style={{ fontSize: "1.5rem" }} className="btn">
+            <button className="btn">
               <em>Faça seu agendamento!</em>
             </button>
           </Link>

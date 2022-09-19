@@ -46,7 +46,7 @@ function Agendamento() {
       .catch((error) => {
         console.log(error);
       });
-  }, [clients]);
+  }, []);
 
   id = clients.length + 1
 

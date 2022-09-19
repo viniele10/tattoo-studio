@@ -3,3 +3,9 @@
     place-items: center;
     color: white;
 }
+
+@media (max-width: 400px) {
+    .footer p {
+        font-size: 0.875rem;
+    }
+}

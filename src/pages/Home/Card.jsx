@@ -7,7 +7,8 @@ import Behance from "../../images/behance.svg";
 function Card(props) {
   return (
     <div className="card">
-      <div className="img-social" />
+      <div className="img-social">
+        </div> 
       <h3 className="card-name">
         <em>{props.nome}</em>
       </h3>

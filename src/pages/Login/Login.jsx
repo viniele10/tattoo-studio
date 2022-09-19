@@ -13,8 +13,8 @@ function Login() {
 
   return (
     <div className="bg-01">
-      <div className="container">
       <HeaderHome tatuador="/#tatuador" contato="/#contato" />
+      <div className="container">
         <div className="container-login">
           <div className="wrap-login">
             <form className="login-form">
