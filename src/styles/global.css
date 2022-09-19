@@ -60,6 +60,10 @@ body {
   background-color: var(--cor-b4);
 }
 
+.fw-400 {
+  font-weight: 400;
+}
+
 .padding-container {
   padding-top: 8rem;
   padding-bottom: 8rem;

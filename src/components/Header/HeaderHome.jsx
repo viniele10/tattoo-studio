@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
+import { useLocation } from "react-router-dom";
 import Logo from "../../images/logo.svg";
 import { HashLink } from 'react-router-hash-link';
 import useMedia from "../../hooks/useMedia";
@@ -9,9 +10,13 @@ import styles from './Header.module.css'
 function HeaderHome(props) {
 
   const [mobileMenu, setMobileMenu] = React.useState(false)
+  const {pathname} = useLocation();
+  React.useEffect(() => {
+    setMobileMenu(false)
+  },[pathname])
 
   const mobile = useMedia('(max-width: 700px)')
-  console.log(mobile)
+  // console.log(mobile)
 
   return (
     <div className="container">
@@ -23,7 +28,7 @@ function HeaderHome(props) {
           {mobile &&
           <button aria-label="Menu" className={`${styles.mobileButton} ${mobileMenu && styles.mobileButtonActive}`} onClick={() => setMobileMenu(!mobileMenu)}></button>
           }
-          <ul role="list">
+          <ul className={ `${mobile ? styles.navMobile : styles.headerUl} ${mobileMenu && styles.navMobileActive}`} role="list">
             <li>
               <HashLink smooth to={props.tatuador}>
               Tatuadores
@@ -34,14 +39,16 @@ function HeaderHome(props) {
               Contato
               </HashLink>
             </li>
-            <Link to="/agendamento">
               <li>
-                <button className="btn">Agendar</button>
+            <Link to="/agendamento">
+                <button className={ `${mobile ? styles.navMobileAgenda : "btn"}`} >Agendar</button>
+            </Link>
               </li>
-            </Link>
+              <li>
             <Link to="/login">
-              <li>Login</li>
+                Login
             </Link>
+              </li>
           </ul>
         </nav>
       </header>

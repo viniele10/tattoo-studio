@@ -2,8 +2,10 @@ import React from "react";
 import { useState } from "react";
 import HeaderHome from "../../components/Header/HeaderHome";
 import Footer from "../../components/Footer/Footer";
-import "./Login.css";
 import Input from "../../components/Form/Input";
+
+import "../../components/Form/Input.css";
+import "./Login.css";
 
 function Login() {
   const [email, setEmail] = useState("");
@@ -12,7 +14,7 @@ function Login() {
   return (
     <div className="bg-01">
       <div className="container">
-        <HeaderHome />
+      <HeaderHome tatuador="/#tatuador" contato="/#contato" />
         <div className="container-login">
           <div className="wrap-login">
             <form className="login-form">
@@ -43,7 +45,7 @@ function Login() {
               </div>
 
               <div className="container-login-form-btn">
-                <button className="login-form-btn btn">Confirmar</button>
+                <button className="login-form-btn btn">Entrar</button>
               </div>
 
               <div className="text-center">
@@ -57,7 +59,7 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
+      <Footer link="/#home" />
     </div>
   );
 }

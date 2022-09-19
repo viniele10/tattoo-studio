@@ -22,7 +22,7 @@ function Home() {
         <HeaderHome tatuador="#tatuador" contato="#contato" />
         <main className="container main-home">
           <div className="titulo">
-            <h1 className="tattoo-title">TATTO</h1>
+            <h1 className="tattoo-title">TATTOO</h1>
             <h1 className="studio-title">
               <em>STUDIO</em>
             </h1>
