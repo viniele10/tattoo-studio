@@ -1,16 +1,36 @@
 import React from "react";
-
-import { Link } from "react-router-dom";
+import axios from "axios";
+// import { useState } from "react";
+// import { Link } from "react-router-dom";
 import HeaderMateriais from "../../components/Header/HeaderMateriais";
 import Footer from "../../components/Footer/Footer";
 import './Materiais.css'
 
-function pesquisarMaterial() {
-  console.log("Materiais");
-}
+let fornecedor = '';
+let id = '';
+let nome = '';
+let quantidade = '';
+let valor = '';
+
+
+// const [materiais, setMateriais] = useState([]);
+
+const urlMateriais = 'https://tattoo-api-squad7-resilia.herokuapp.com';
+
 
 function Materiais() {
 
+  // const [materiais, setMateriais] = useState([]);
+
+  axios
+  .get(`${urlMateriais}/materials`)
+  .then((res) => {
+    // setMateriais(res.data);
+
+  })
+  .catch((error) => {
+    console.log(error);
+  });;
 
 
     return (
@@ -20,16 +40,20 @@ function Materiais() {
         </header>
         <section className="inputPesquisar">
           <strong>MATERIAIS</strong>
-          <input type="text"  name='pesquisar' id='pesquisar' onKeyUp={pesquisarMaterial()} placeholder="Pesquisar..."/>
+          <input type="text"  name='pesquisar' id='pesquisar'  placeholder="Pesquisar..."/>
         </section>
 
         <div className="parent">
-            <div className="div1"> </div>
-            <div className="div2"> </div>
-            <div className="div3"> </div>
-            <div className="div4"> </div>
-            <div className="div5"> </div>
-            <div className="div6"> </div>
+            <div >
+              <p>nanana</p>
+              <p>{fornecedor}</p>
+              <p>nanana</p>
+            </div>
+            <div className="div2"> <p>nanana</p></div>
+            <div className="div3"> <p>nanana</p></div>
+            <div className="div4"> <p>nanana</p></div>
+            <div className="div5"> <p>nanana</p></div>
+            <div className="div6"> <p>nanana</p></div>
             <div className="div7"> </div>
             <div className="div8"> </div>
             <div className="div9"> </div>
