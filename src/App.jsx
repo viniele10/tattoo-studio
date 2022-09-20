@@ -27,7 +27,9 @@ function App() {
         <Route path="/lidia" element={<TatuadorMenu nome="Lidia Souza" />} />
         <Route path="/felipe" element={<TatuadorMenu nome="Felipe Moraes" />} />
         <Route path="/zoe" element={<TatuadorMenu nome="Zoe Smith" />} />
-        <Route path="/agendamentos" element={<Agenda />} />
+        <Route path="/lidia/agendamentos" element={<Agenda nome="Lidia Souza" />} />
+        <Route path="/felipe/agendamentos" element={<Agenda nome="Felipe Moraes" />} />
+        <Route path="/zoe/agendamentos" element={<Agenda nome="Zoe Smith" />} />
       </Routes>
     </div>
   );

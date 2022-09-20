@@ -7,7 +7,7 @@ import "./TatuadorMenu.css";
 
 function TatuadorMenu(props) {
 
-  const [dados, setDados] = React.useState([])
+  const [dados, setDados] = React.useState([0])
 
   React.useEffect(() => {
     axios.get("https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos")
@@ -22,13 +22,22 @@ function TatuadorMenu(props) {
 }, [])
 
 let count = 0
+let tatuador = ''
+
+  if (props.nome === 'Felipe Moraes') {
+    tatuador = 'felipe'
+  } else if (props.nome === 'Lidia Souza') {
+    tatuador = 'lidia'
+  } else if (props.nome === 'Zoe Smith') {
+    tatuador = 'zoe'
+  }
 
 dados.map(item => {
-  if (item.TATUADOR_ID === 1 && props.nome === 'Felipe Moraes') {
+  if (item?.TATUADOR_ID === 1 && props.nome === "Felipe Moraes") {
     count++
-  } else if (item.TATUADOR_ID === 2 && props.nome === 'Lidia Souza') {
+  } else if (item?.TATUADOR_ID === 2 && props.nome === "Lidia Souza") {
     count++
-  } else if (item.TATUADOR_ID === 3 && props.nome === 'Zoe Smith') {
+  } else if (item?.TATUADOR_ID === 3 && props.nome === "Zoe Smith") {
     count++
   }
 })
@@ -40,7 +49,7 @@ dados.map(item => {
         <h1 className="titulo-menu">Bem-Vindo(a)!</h1>
         <h2>{props.nome}</h2>
         <div className="btn-menu">
-          <Link to="/agendamentos">
+          <Link to={`/${tatuador}/agendamentos`}>
             <button className="btn btn-notify">Agendamentos
           <span className="notify">{count}</span>
             </button>
