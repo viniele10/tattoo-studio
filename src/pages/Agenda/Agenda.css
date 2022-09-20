@@ -25,3 +25,10 @@ border-radius: 20px;
 .agenda{
     min-height: 1000px;
 }
+.ir{
+    height: 15px;
+    margin-top: 10px;
+    margin-left: 10px;
+    border: none;
+  
+}

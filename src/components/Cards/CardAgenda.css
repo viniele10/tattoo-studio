@@ -55,4 +55,9 @@ h2{
 .alterar{
   display: flex;
   flex-direction: column;
+  border: red solid 1px;
+}
+
+.alterar input {
+  border-bottom: 1px rgb(157, 155, 155) solid;
 }

@@ -8,8 +8,10 @@ import HeaderAgenda from '../../components/Header/HeaderAgenda';
 
 function Agenda() {  
   const [ dados, setDados ] = useState([])
-  const [id, setId] = useState(0)
+  const [id, setId] = useState(1)
   const [agendamento, setAgendamento] = useState([])
+
+  const [hidden, setHidden] = useState(true)
 
 
 
@@ -30,15 +32,16 @@ function Agenda() {
 
   const getId = () => {
     axios
-    .get(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos/${id}`)
+    .get(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamento/${id}`)
     .then((res) => {
-      setAgendamento(res.data)
+      setAgendamento(res.data.Agendamentos)
+    
 
     })
   }
 
   useEffect(() => {
-    getApi(), getId();}, []);
+    getApi();}, []);
 
 
 
@@ -48,7 +51,8 @@ function Agenda() {
 
         <br></br>
         <div className='pesquisa'>
-            <input placeholder='  Pesquisar'  onChange={(e) => setId(e.target.value)} className='pesquisar' type='text'></input>
+            <input placeholder='  Pesquisar'  onChange={(e) => setId(e.target.value)} onClick={getId} className='pesquisar' ></input>
+            <button  className ='ir' onClick={() => {setHidden(s => !s); getId()}}> IR </button>
 
         </div>
         <br></br>
@@ -56,7 +60,25 @@ function Agenda() {
        
         <div>
         <div className="cardDiv">
-        {dados?.map((item) => (
+        
+          
+      {!hidden ? <div> 
+        {agendamento?.map((agendamento) => (
+          (
+            <Card 
+              id={agendamento.ID}
+              descricao={agendamento.DESCRICAO}
+              data={agendamento.DATA}
+              horario={agendamento.HORARIO}
+              tatuador_id={agendamento.TATUADOR_ID}
+              cliente_id={agendamento.CLIENTE_ID}
+              preco={agendamento.PRECO}
+            />
+
+          )
+        ))}  
+        </div>: <div>
+           {dados?.map((item) => (
             (<Card 
               id={item.ID}
               descricao={item.DESCRICAO}
@@ -70,9 +92,7 @@ function Agenda() {
             
           )
       ))}
-        
-          
-      
+          </div>}
         
       </div>
    
