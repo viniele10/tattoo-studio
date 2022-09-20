@@ -4,8 +4,6 @@
   grid-template-rows: repeat(3, 1fr);
   grid-column-gap: 100px;
   grid-row-gap: 50px;
-  padding: 50px;
-  margin-left: 10%;
   background-color: black;
 }
 .pesquisar {
@@ -32,4 +30,15 @@
 .bg-0{
   height: 100vh;
 
+}
+.divId{
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  padding: 50px;
+  margin-left: 10%;
+  background-color: black;
 }

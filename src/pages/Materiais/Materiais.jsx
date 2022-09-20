@@ -43,7 +43,7 @@ function Materiais() {
 
           <div className="div1"> 
           {materiais?.map((material) => (
-            (<Card>
+              (<Card>
               id={material.ID}
               fornecedor={material.FORNECEDOR}
               produto={material.PRODUTO}

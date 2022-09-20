@@ -70,7 +70,7 @@ function Agenda(props) {
             IR
           </button>
         </div>
-        <div className="cardDiv">
+        <div className="divId">
               {agendamento?.map((agendamento) => (
                 <Card key={agendamento?.ID}
                   id={agendamento?.ID}
