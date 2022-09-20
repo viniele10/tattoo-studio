@@ -64,7 +64,7 @@ export default function Card (props){
                 <button onClick={() => setConfirm(s => !s)} className='conf'>Confirmar </button>
                 <button onClick={() => setHidden(s => !s)} className='alt'> Editar</button>
                 {!hidden ? <div className='alterar'>
-                    <input placeholder='ID' onChange={(e) => setId(e.target.value)} type="text"></input>
+                    <input placeholder='Digite o mesmo ID' onChange={(e) => setId(e.target.value)} type="text"></input>
                     <input placeholder='Descricao' onChange={(e) => setDescricao(e.target.value)} type="text"></input>
                     <input placeholder='Data' onChange={(e) => setData(e.target.value)} type="date"></input>
                     <input placeholder='Horario' onChange={(e) => setHorario(e.target.value)} type="time"></input>

@@ -1,38 +1,35 @@
 import React from "react";
 import axios from "axios";
-// import { useState } from "react";
+import { useState, useEffect } from "react";
 import HeaderMateriais from "../../components/Header/HeaderMateriais";
 import Footer from "../../components/Footer/Footer";
 import { Buttons } from "../../components/Buttons/Buttons.jsx";
 import './Materiais.css'
-
-let fornecedor = '';
-let id = '';
-let nome = '';
-let quantidade = '';
-let valor = '';
-
-
-// const [materiais, setMateriais] = useState([]);
-
-const urlMateriais = 'https://tattoo-api-squad7-resilia.herokuapp.com';
+import Card from "../../components/Cards/CardMateriais";
 
 
 function Materiais() {
 
-  // const [materiais, setMateriais] = useState([]);
-
-  axios
-  .get(`${urlMateriais}/materials`)
-  .then((res) => {
-    // setMateriais(res.data);
-
-  })
-  .catch((error) => {
-    console.log(error);
-  });;
+  const [materiais, setMateriais] = useState([]);
 
 
+  useEffect(() => {
+    const getApi = () => {
+      axios
+      .get(`https://tattoo-api-squad7-resilia.herokuapp.com/materials`)
+      .then((res) => {
+        setMateriais(res.data)      
+  
+      })
+    }
+
+    getApi()
+    
+  }, [setMateriais]);
+
+  console.log(materiais)
+
+    
     return (
       <div className="mainMateriais">
         <header>
@@ -44,16 +41,20 @@ function Materiais() {
           < Buttons/>
         </section>
 
-        <section className="parent">
-          <div className="div1"> banana</div>
-            {/* < Buttons/>  Resolver essa posição do button !!!! */}
-          <div className="div2" id="div"> banana</div>
-          <div className="div3" id="div"> banana</div>
-          <div className="div4" id="div"> banana</div>
-          <div className="div5" id="div"> banana</div>
-          <div className="div6" id="div"> banana</div>
+          <div className="div1"> 
+          {materiais?.map((material) => (
+            (<Card>
+              id={material.ID}
+              fornecedor={material.FORNECEDOR}
+              produto={material.PRODUTO}
+              quantidade={material.QUANTIDADE}
+              valor={material.VALOR}
+             
+            </Card>)
+          ))}
+          </div>
+   
 
-        </section>
 
         <Footer/>
   
