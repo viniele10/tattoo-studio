@@ -1,0 +1,118 @@
+.header {
+  background-color: transparent;
+}
+
+.header nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.headerUl {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+}
+
+.header nav li,
+nav li a {
+  color: white;
+  list-style: none;
+}
+
+.header nav li:hover,
+nav li a:hover {
+  color: #ff004c;
+}
+
+.mobileButton {
+  background-color: transparent;
+  border-radius: 50rem;
+  height: 50px;
+  width: 50px;
+  padding: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 1px solid transparent;
+  transition: 0.1s;
+  cursor: pointer;
+}
+
+.mobileButton::after {
+  content: "";
+  display: block;
+  width: 1.5rem;
+  height: 2.5px;
+  border-radius: 2px;
+  padding: 0;
+  background-color: var(--cor-w0);
+  box-shadow: 0 8px var(--cor-w0), 0 -8px var(--cor-w0);
+  transition: 0.2s;
+  border-radius: 50rem;
+}
+
+.mobileButton:focus,
+.mobileButton:hover,
+.mobileButtonActive {
+  outline: none;
+  background: rgba(131, 131, 131, 0.322);
+}
+
+.mobileButtonActive::after {
+  transform: rotate(-90deg);
+  width: 4px;
+  height: 4px;
+  box-shadow: 0 8px var(--cor-w0), 0 -8px var(--cor-w0);
+}
+
+.navMobile {
+  text-align: center;
+  width: 40%;
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
+  padding: 1rem 3rem;
+  position: absolute;
+  top: 70px;
+  right: 60px;
+  box-shadow: 0 1px 2px rgba(61, 61, 61, 0.137);
+  border-radius: 0.5rem;
+  transform: translateX(-10px);
+  opacity: 0;
+  pointer-events: none;
+}
+
+.navMobileActive {
+  transition: 0.3s;
+  transform: initial;
+  opacity: 1;
+  pointer-events: initial;
+  z-index: 100;
+}
+
+.navMobile li {
+  width: 100%;
+  background-color: none;
+  border-bottom: 1px solid rgba(238, 238, 238, 0.267);
+  padding: 0.5rem 0;
+  cursor: pointer;
+}
+
+.navMobile li:hover {
+  color: var(--cor-details1);
+}
+
+.navMobileAgenda {
+  border: none;
+  font-family: Inter, sans serif;
+  font-weight: 400;
+  background-color: transparent;
+  color: var(--cor-w0);
+}
+
+@media (max-width: 430px) {
+  .navMobile {
+    width: 50%;
+  }
+}
