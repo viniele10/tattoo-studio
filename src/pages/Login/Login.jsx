@@ -1,7 +1,10 @@
 import React from "react";
 import { useState } from "react";
-import HeaderAgenda from "../../components/Header/HeaderAgenda";
+import HeaderHome from "../../components/Header/HeaderHome";
 import Footer from "../../components/Footer/Footer";
+import Input from "../../components/Form/Input";
+
+import "../../components/Form/Input.css";
 import "./Login.css";
 
 function Login() {
@@ -9,31 +12,32 @@ function Login() {
   const [password, setPassword] = useState("");
 
   return (
-    <>
+    <div className="bg-01">
       <div className="container">
-        <HeaderAgenda/>
+      <HeaderHome tatuador="/#tatuador" contato="/#contato" />
         <div className="container-login">
           <div className="wrap-login">
             <form className="login-form">
               <span className="login-form-title">LOGIN</span>
 
               <div className="wrap-input">
-                <input
-                  className={email !== "" ? "has-val input" : "input"}
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                />
+                <Input type="email" className={email !== "" ? "has-val input" : "input"}
+                 value={email}
+                 onChange={(e) => setEmail(e.target.value)}/>
                 <span className="focus-input" data-placeholder="E-mail"></span>
               </div>
 
               <div className="wrap-input">
-                <input
+                {/* <input
                   className={password !== "" ? "has-val input" : "input"}
                   type="password"
                   value={password}
                   onChange={(e) => setPassword(e.target.value)}
-                />
+                /> */}
+                <Input type="password" className={password !== "" ? "has-val input" : "input"}
+                 value={password}
+                 onChange={(e) => setPassword(e.target.value)}/>
+               
                 <span
                   className="focus-input"
                   data-placeholder="Password"
@@ -41,7 +45,7 @@ function Login() {
               </div>
 
               <div className="container-login-form-btn">
-                <button className="login-form-btn">Confirmar</button>
+                <button className="login-form-btn btn">Entrar</button>
               </div>
 
               <div className="text-center">
@@ -55,8 +59,8 @@ function Login() {
           </div>
         </div>
       </div>
-      <Footer />
-    </>
+      <Footer link="/#home" />
+    </div>
   );
 }
 

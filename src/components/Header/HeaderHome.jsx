@@ -2,7 +2,7 @@ import React from "react";
 
 import { Link } from "react-router-dom";
 import { useLocation } from "react-router-dom";
-//import Logo from "../../images/logo.svg";
+import Logo from "../../images/logo.svg";
 import { HashLink } from 'react-router-hash-link';
 import useMedia from "../../hooks/useMedia";
 import styles from './Header.module.css'
@@ -23,7 +23,7 @@ function HeaderHome(props) {
       <header className={styles.header}>
         <nav>
           <Link to="/">
-            <img  alt="Mellv - Logo" />
+            <img src={Logo} alt="Mellv - Logo" />
           </Link>
           {mobile &&
           <button aria-label="Menu" className={`${styles.mobileButton} ${mobileMenu && styles.mobileButtonActive}`} onClick={() => setMobileMenu(!mobileMenu)}></button>

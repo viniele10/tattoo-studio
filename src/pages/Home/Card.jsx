@@ -1,8 +1,8 @@
 import React from "react";
 
-import Twitter from "../../assets/twitter.svg";
-import Instagram from "../../assets/instagram.svg";
-import Behance from "../../assets/behance.svg";
+import Twitter from "../../images/twitter.svg";
+import Instagram from "../../images/instagram.svg";
+import Behance from "../../images/behance.svg";
 
 function Card(props) {
   return (

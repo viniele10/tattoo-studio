@@ -1,0 +1,17 @@
+.Buttons li {
+    padding-left: 18px;
+    list-style: none;
+}
+
+.Buttons ul {
+    display: flex;
+    font-size: 12px;
+}
+
+.Buttons:hover{ cursor: pointer; }
+
+.Buttons :nth-child(1){ color: #E0B64A; }
+
+.Buttons :nth-child(2){ color: #13582F; }
+
+.Buttons :nth-child(3){ color: #C04444; }

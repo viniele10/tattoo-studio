@@ -5,9 +5,9 @@ import { Link } from "react-router-dom";
 
 import HeaderHome from "../../components/Header/HeaderHome";
 import Footer from "../../components/Footer/Footer";
-//import Instagram from "../../images/instagram-rosa.svg";
-//import Email from "../../images/email.svg";
-//import Telefone from "../../images/phone.svg";
+import Instagram from "../../images/instagram-rosa.svg";
+import Email from "../../images/email.svg";
+import Telefone from "../../images/phone.svg";
 import Card from "./Card";
 
 import "./Home.css";
@@ -73,19 +73,19 @@ function Home() {
               </ul>
               <ul className="contato-redesocial" role="list">
                 <li>
-                  <img  alt=""></img>
+                  <img src={Telefone} alt=""></img>
                   <p>
                     <strong>75</strong> 99999-9999
                   </p>
                 </li>
                 <li>
-                  <img  alt=""></img>
+                  <img src={Email} alt=""></img>
                   <p>
                     mellv<strong>@email.com</strong>
                   </p>
                 </li>
                 <li>
-                  <img alt=""></img>
+                  <img src={Instagram} alt=""></img>
                   <p>
                     <strong>@</strong>mellv
                   </p>
