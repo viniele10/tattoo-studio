@@ -1,14 +1,13 @@
 import React from "react";
-import { Route, Routes} from "react-router-dom";
+import { Route, Routes } from "react-router-dom";
 
 import Home from "./pages/Home/Home.jsx";
 import Agendamento from "./pages/Agendamento/Agendamento.jsx";
 import Login from "./pages/Login/Login.jsx";
 import Agenda from "./pages/Agenda/Agenda";
-import TatuadorMenu from "./components/Header/HeaderTatuador.jsx";
-
 import Materiais from "./pages/Materiais/Materiais.jsx";
 import "./styles/global.css";
+import TatuadorMenu from "./pages/Tatuador/TatuadorMenu.jsx";
 
 function App() {
   return (

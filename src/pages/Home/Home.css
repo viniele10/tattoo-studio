@@ -3,7 +3,6 @@
   background-color: #212121;
   background-image: url("../../images/home-bg.jpg");
   background-position: center center;
-  /* background-attachment: fixed; */
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -13,14 +12,13 @@
 }
 
 .tattoo-title {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--cor-w0);
   color: transparent;
   margin-left: 15rem;
 }
 
 .studio-title {
-  color: white;
-  /* background: rgb(255, 84, 141); */
+  color: var(--cor-w0);
 }
 
 .main-home {
@@ -31,11 +29,13 @@
   place-items: end;
 }
 
+.main-home button {
+  font-size: 1.5rem;
+}
+
 .title-session {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--cor-w0);
   color: transparent;
-  /* writing-mode: vertical-lr;
-  transform: rotate(180deg); */
   font-size: 5rem;
   text-align: center;
   font-style: italic;
@@ -43,7 +43,7 @@
 
 .tatuadores {
   display: grid;
-  place-content: center; 
+  place-content: center;
   gap: 5rem;
 }
 
@@ -51,6 +51,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 6rem;
+  padding: 0 2rem;
 }
 
 .card {
@@ -60,7 +61,6 @@
   border-radius: 40px 0 40px 0;
   text-align: center;
   color: var(--cor-w1);
-  /* border: #ff004c86 1px solid; */
   font-family: inherit;
   z-index: 1;
   display: flex;
@@ -81,20 +81,48 @@
   color: #575656;
 }
 
-.img-social {
+.img-social1 {
   display: flex;
   margin: 0 auto;
   width: 100px;
   height: 100px;
-  /* border: 1px solid #ff004c86; */
   border-radius: 50%;
   font-size: 11px;
   justify-content: center;
   align-items: center;
   transition: all 0.5s;
   z-index: 99;
-  /* background-color: #152f50; */
-  background-image: url("../../images/tatuado01.svg");
+  background-image: url("../../images/tatuador1.svg");
+  background-repeat: no-repeat, no-repeat;
+}
+
+.img-social2 {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 99;
+  background-image: url("../../images/tatuador2.svg");
+  background-repeat: no-repeat, no-repeat;
+}
+
+.img-social3 {
+  display: flex;
+  margin: 0 auto;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  font-size: 11px;
+  justify-content: center;
+  align-items: center;
+  transition: all 0.5s;
+  z-index: 99;
+  background-image: url("../../images/tatuador3.svg");
   background-repeat: no-repeat, no-repeat;
 }
 
@@ -128,7 +156,7 @@
 }
 
 .title-session-contato {
-  -webkit-text-stroke: 1px white;
+  -webkit-text-stroke: 1px var(--cor-w0);
   color: transparent;
   writing-mode: vertical-lr;
   transform: rotate(180deg);
@@ -164,4 +192,88 @@
   display: flex;
   justify-content: space-between;
   margin-top: 1rem;
+}
+
+@media (max-width: 860px) {
+  .cards {
+    gap: 2rem;
+  }
+  iframe {
+    width: 500px;
+  }
+  .titulo h1 {
+    font-size: 5rem;
+  }
+  .main-home {
+    gap: 3rem;
+  }
+}
+
+@media (max-width: 730px) {
+  .main-home {
+    place-items: center;
+  }
+  .tattoo-title {
+    margin-left: 8rem;
+  }
+  .cards {
+    grid-template-columns: 1fr;
+    place-items: center;
+  }
+  iframe {
+    width: 300px;
+  }
+  .contato-info {
+    display: grid;
+    gap: 1rem;
+  }
+  .title-session {
+    font-size: 4rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .titulo h1 {
+    font-size: 4rem;
+  }
+  .main-home {
+    gap: 0;
+  }
+  iframe {
+    width: 200px;
+    height: 200px;
+  }
+  .contato-container h2 {
+    font-size: 4rem;
+  }
+  .title-session {
+    font-size: 3rem;
+  }
+}
+
+@media (max-width: 430px) {
+  .titulo h1 {
+    font-size: 3rem;
+  }
+  .tattoo-title {
+    margin-left: 2.2rem;
+  }
+  .main-home {
+    gap: 0;
+  }
+  .title-session {
+    font-size: 2.5rem;
+  }
+  .contato-container h2 {
+    font-size: 2.5rem;
+    writing-mode: horizontal-tb;
+    transform: rotate(0);
+    margin-bottom: 5rem;
+  }
+  .contato-container {
+    grid-template-columns: 1fr;
+  }
+  .main-home button {
+    font-size: 1rem;
+  }
 }

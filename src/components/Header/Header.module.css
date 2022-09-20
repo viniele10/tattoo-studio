@@ -29,9 +29,9 @@ nav li a:hover {
 .mobileButton {
   background-color: transparent;
   border-radius: 50rem;
-  height: 40px;
-  width: 40px;
-  padding: 0px;
+  height: 50px;
+  width: 50px;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -41,15 +41,16 @@ nav li a:hover {
 }
 
 .mobileButton::after {
-  content: '';
+  content: "";
   display: block;
-  width: 1.2rem;
-  height: 2px;
+  width: 1.5rem;
+  height: 2.5px;
   border-radius: 2px;
-  padding: 0rem;
+  padding: 0;
   background-color: var(--cor-w0);
-  box-shadow: 0 6px var(--cor-w0), 0 -6px var(--cor-w0);
+  box-shadow: 0 8px var(--cor-w0), 0 -8px var(--cor-w0);
   transition: 0.2s;
+  border-radius: 50rem;
 }
 
 .mobileButton:focus,
@@ -66,32 +67,24 @@ nav li a:hover {
   box-shadow: 0 8px var(--cor-w0), 0 -8px var(--cor-w0);
 }
 
-
-/* .mobileButtonActive {
-  outline: none;
-  box-shadow: 0 0 0 1px var(--cor-w0);
-  border: 0 solid;
-  border-color: var(--cor-w0);
-  color: var(--cor-details0);
-} */
-
 .navMobile {
   text-align: center;
-  width: 35%;
-  background-color: rgba(255, 255, 255, 0.493);
+  width: 40%;
+  background: hsl(var(--clr-white) / 0.05);
+  backdrop-filter: blur(1.5rem);
   padding: 1rem 3rem;
   position: absolute;
   top: 70px;
   right: 60px;
-  box-shadow: 0 1px 2px rgba(0, 0 ,0, .2);
-  border-radius: .5rem;
+  box-shadow: 0 1px 2px rgba(61, 61, 61, 0.137);
+  border-radius: 0.5rem;
   transform: translateX(-10px);
   opacity: 0;
   pointer-events: none;
 }
 
 .navMobileActive {
-  transition: .3s;
+  transition: 0.3s;
   transform: initial;
   opacity: 1;
   pointer-events: initial;
@@ -110,11 +103,16 @@ nav li a:hover {
   color: var(--cor-details1);
 }
 
-
 .navMobileAgenda {
   border: none;
   font-family: Inter, sans serif;
   font-weight: 400;
   background-color: transparent;
   color: var(--cor-w0);
+}
+
+@media (max-width: 430px) {
+  .navMobile {
+    width: 50%;
+  }
 }

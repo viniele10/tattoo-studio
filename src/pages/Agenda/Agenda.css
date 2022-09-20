@@ -1,40 +1,34 @@
-
-.cardDiv{
-    
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(3, 1fr);
-        grid-column-gap: 100px;
-        grid-row-gap: 50px;
-        padding: 50px;
-        margin-left: 10%;
-      
-
-
+.cardDiv {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-column-gap: 100px;
+  grid-row-gap: 50px;
+  padding: 50px;
+  margin-left: 10%;
 }
-.pesquisar{
-width: 1000px;
-height: 50px;
-left: 189px;
-top: 196px;
-background: rgba(200, 200, 200, 0.3);
-border-radius: 20px;
+.pesquisar {
+  width: 1000px;
+  height: 50px;
+  left: 189px;
+  top: 196px;
+  background: rgba(200, 200, 200, 0.3);
+  border-radius: 20px;
 }
 
-.pesquisa{
-    display: flex;
-    justify-content: center;
+.pesquisa {
+  display: flex;
+  justify-content: center;
 }
-.agenda{
-    min-height: 1000px;
-    background-color: black;
+.agenda {
+  min-height: 1000px;
+  background-color: black;
 }
-.ir{
-    height: 25px;
-    margin-top: 10px;
-    margin-left: 10px;
-    border: none;
-    color: white;
-    background-color: black;
-  
+.ir {
+  height: 25px;
+  margin-top: 10px;
+  margin-left: 10px;
+  border: none;
+  color: white;
+  background-color: black;
 }

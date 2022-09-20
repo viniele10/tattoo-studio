@@ -17,7 +17,7 @@
 
 .container {
   max-width: 1250px; 
-  padding: 1rem 4rem;
+  padding: 1rem 2rem;
   margin: 0 auto;
 }
 
@@ -65,6 +65,6 @@ body {
 }
 
 .padding-container {
-  padding-top: 8rem;
-  padding-bottom: 8rem;
+  padding-top: 5rem;
+  padding-bottom: 5rem;
 }
