@@ -1,7 +1,6 @@
 import React from "react";
 
 import { Link } from "react-router-dom";
-import useMedia from "../../hooks/useMedia";
 
 
 import HeaderHome from "../../components/Header/HeaderHome";
@@ -14,8 +13,6 @@ import Card from "./Card";
 import "./Home.css";
 
 function Home() {
-
-  // const mobile = useMedia('(max-width: 860px)')
 
   return (
     <>

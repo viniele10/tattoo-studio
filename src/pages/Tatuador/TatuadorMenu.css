@@ -1,0 +1,81 @@
+.menu-tatuadores h2 {
+  color: transparent;
+  font-size: 5rem;
+  -webkit-text-stroke: 1px var(--cor-w0);
+  text-transform: uppercase;
+}
+
+.menu-tatuadores {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+}
+
+.titulo-menu {
+  font-size: 6rem;
+  color: var(--cor-w0);
+  font-style: italic;
+  line-height: 1;
+}
+
+.menu-tatuadores button {
+  font-size: 1.6rem;
+  padding-left: 2.5rem;
+  padding-right: 2.5rem;
+  font-style: italic;
+}
+
+.btn-menu {
+  display: flex;
+  gap: 2rem;
+}
+
+.btn-notify {
+  position: relative;
+  transition: all 0.2s;
+}
+
+.notify {
+  position: absolute;
+  right: -0.6em;
+  top: -0.6em;
+  min-width: 1.6em;
+  height: 1.6em;
+  border-radius: 0.8em;
+  background-color: red;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 0.8em;
+  color: white;
+
+  font-style: normal;
+}
+
+.bg-menu-tatuadores {
+  height: 100vh;
+  background-color: #212121;
+  background-image: url("../../images/bg-menu.jpg");
+  background-position: center center;
+  background-repeat: no-repeat, no-repeat;
+}
+
+@media (max-width: 530px) {
+  .titulo-menu {
+    font-size: 2.5rem;
+  }
+  .menu-tatuadores h2 {
+    font-size: 2.5rem;
+  }
+  .menu-tatuadores button {
+    font-size: 1rem;
+    padding-left: 1.3rem;
+    padding-right: 1.3rem;
+  }
+  .btn-menu {
+    gap: 1rem;
+  }
+}

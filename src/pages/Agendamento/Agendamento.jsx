@@ -30,7 +30,6 @@ function Agendamento() {
 
   function onChangeValue(event) {
     setValor(event.target.value);
-    console.log(event.target.value);
   }
 
   let [id, setId] = useState(0);
@@ -46,7 +45,7 @@ function Agendamento() {
       .catch((error) => {
         console.log(error);
       });
-  }, []);
+  }, [clients]);
 
   id = clients.length + 1
 
@@ -125,11 +124,11 @@ function Agendamento() {
 
             {/* <label>Cidade:</label> */}
             <div className="wrap-input">
-              <input
+              <Input
                 className={city !== "" ? "has-val input" : "input"}
                 onChange={(e) => setCidade(e.target.value)}
                 type="text"
-              ></input>
+              ></Input>
               <span className="focus-input" data-placeholder="Cidade"></span>
             </div>
 
@@ -138,24 +137,24 @@ function Agendamento() {
               <label htmlFor="data" className="label">
                 Escolha a data:
               </label>
-                <input
+                <Input
                   id="data"
                   className={date !== "" ? "has-val input" : "input"}
                   onChange={(e) => setData(e.target.value)}
                   type="date"
-                ></input>
+                ></Input>
               </div>
 
               <div className="wrap-input">
               <label htmlFor="horario" className="label">
                 Escolha o horário:
               </label>
-                <input
+                <Input
                   id="horario"
                   className={horario !== "" ? "has-val input" : "input"}
                   onChange={(e) => setHorario(e.target.value)}
                   type="time"
-                ></input>
+                ></Input>
               </div>
             </div>
 
@@ -176,11 +175,11 @@ function Agendamento() {
               <span className="custom-arrow"></span>
             </div>
             <div className="wrap-input">
-              <input
+              <Input
                 className={descricao !== "" ? "has-val input" : "input"}
                 onChange={(e) => setDescricao(e.target.value)}
                 type="text"
-              ></input>
+              ></Input>
               <span
                 className="focus-input"
                 data-placeholder="Descrição da Tatuagem"

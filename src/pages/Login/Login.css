@@ -6,7 +6,6 @@
   align-items: center;
   justify-content: center;
 
-  /* padding: 15px; */
 }
 
 .wrap-login {
@@ -35,7 +34,6 @@
 
 .login-form-btn {
   width: 100%;
-  /* height: 50px; */
 }
 
 .login-form-btn:hover {

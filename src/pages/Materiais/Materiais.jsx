@@ -6,7 +6,7 @@ import './Materiais.css'
 function Materiais() {
   return (
     <div className="main-materiais">
-      <HeaderTatuador />
+       <HeaderTatuador nome="Voltar" />
       <h1> Lista de materiais do estúdio:</h1>
     </div>
   );

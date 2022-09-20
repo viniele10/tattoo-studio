@@ -1,51 +1,18 @@
-import React from 'react';
-import { useState, useEffect } from 'react';
-import {Route, Routes, Link} from "react-router-dom";
-import  Materiais  from "../Materiais/Materiais";
+import React from "react";
 
+import HeaderTatuador from "../../components/Header/HeaderTatuador";
 
-function Agenda() {  
-  const [ dados, setDados ] = useState([])
-
-
-
-  const url = "https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos"
-
-  const getApi = async () => {
-    try {
-      let res = await fetch (url)
-      let data = await res.json()
-      console.log(data)
-      setDados(data)
-    }catch(erro){
-      console.log(erro)
-    }
-
-  }
-
-  useEffect(() => {
-    getApi();}, []);
-
-
-
-
-    return (
-      <div>
-         <Link className = 'navbar' to='/materiais'>Materiais</Link>
-
-        <h1> Calendário de agendamentos:</h1>
-        <p>{dados.agendamentos}</p>
-
-        <Routes>
-             <Route path='/materiais'element ={<Materiais/>}/>
-
-        </Routes>
-       
-  
+function Agenda() {
+  return (
+    <div className="bg-0">
+      <HeaderTatuador nome="Voltar" />
+      <div className="container">
+        <form>
+          <input type="search" />
+        </form>
       </div>
-    
-    )
-  }
-  
-  export default Agenda;
-  
+    </div>
+  );
+}
+
+export default Agenda;
