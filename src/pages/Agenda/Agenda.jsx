@@ -1,29 +1,49 @@
 import React from "react";
 
 import axios from "axios";
+import { useState, useEffect } from "react";
+import Card from "../../components/Cards/CardAgenda";
+import "./Agenda.css";
 
 import HeaderTatuador from "../../components/Header/HeaderTatuador";
 
 function Agenda(props) {
   const [dados, setDados] = React.useState([]);
+  const [id, setId] = useState(1);
+  const [agendamento, setAgendamento] = useState([]);
 
-  React.useEffect(() => {
+  const [hidden, setHidden] = useState(false);
+
+  const url = "https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos";
+
+  const getApi = async () => {
+    try {
+      let res = await fetch(url);
+      let data = await res.json();
+      console.log(data);
+      setDados([...dados, ...data.Agendamentos]);
+    } catch (erro) {
+      console.log(erro);
+    }
+  };
+
+  const getId = () => {
     axios
-      .get("https://tattoo-api-squad7-resilia.herokuapp.com/agendamentos")
-      .then((response) => {
-        setDados(response.data.Agendamentos);
-      })
-
-      .catch(() => {
-        console.log("Deu errrado");
+      .get(`https://tattoo-api-squad7-resilia.herokuapp.com/agendamento/${id}`)
+      .then((res) => {
+        setAgendamento(res.data.Agendamentos);
       });
+  };
+
+  useEffect(() => {
+    getApi();
   }, []);
 
   let array = [];
 
   dados.find((agendamento) => {
     if (agendamento?.TATUADOR_ID === 1 && props.nome === "Felipe Moraes") {
-      array.push(agendamento)
+      array.push(agendamento);
     } else if (agendamento?.TATUADOR_ID === 3 && props.nome === "Zoe Smith") {
       array.push(agendamento);
     } else if (agendamento?.TATUADOR_ID === 2 && props.nome === "Lidia Souza") {
@@ -31,23 +51,55 @@ function Agenda(props) {
     }
   });
 
+
   return (
     <div className="bg-0">
       <HeaderTatuador nome="Voltar" />
       <div className="container">
-        <form>
-          <h1 style={{ color: "white" }}>Agenda: {props.nome}</h1>
-          <input type="search" />
-        </form>
-        {array?.map((item) => {
-          return (
-            <div key={item?.ID}>
-              <div>
-                <p style={{ color: "white" }}>{item?.DESCRICAO}</p>
-              </div>
+        <h1 style={{ color: "white" }}>{props.nome}</h1>
+        <div className="pesquisa">
+          <input
+            placeholder="  Pesquisar"
+            onChange={(e) => setId(e.target.value)}
+            // onClick={getId}
+            className="pesquisar"
+          ></input>
+          <button
+            className="ir"
+            onClick={() => {setHidden(true); getId()}}
+          >
+            IR
+          </button>
+        </div>
+        <div className="cardDiv">
+            <div>
+              {agendamento?.map((agendamento) => (
+                <Card key={agendamento?.ID}
+                  id={agendamento?.ID}
+                  descricao={agendamento?.DESCRICAO}
+                  data={agendamento?.DATA}
+                  horario={agendamento?.HORARIO}
+                  tatuador_id={agendamento?.TATUADOR_ID}
+                  cliente_id={agendamento?.CLIENTE_ID}
+                  preco={agendamento?.PRECO}
+                />
+              ))}
             </div>
-          );
-        })}
+            {!hidden ?  
+            <div className="cardDiv">
+              {array?.map((item) => (
+                <Card key={item?.ID}
+                  id={item?.ID}
+                  descricao={item?.DESCRICAO}
+                  data={item?.DATA}
+                  horario={item?.HORARIO}
+                  tatuador_id={item?.TATUADOR_ID}
+                  cliente_id={item?.CLIENTE_ID}
+                  preco={item?.PRECO}
+                />
+              ))} 
+            </div> : '' } 
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,84 @@
+.agenda1{
+    text-align: justify;
+    padding: 1em;
+    width: 400px;
+    height: 180px;
+    margin: 10px;
+    margin-right: 17px;
+    background: #1E1E1E;
+    border-radius: 20px;
+    grid-area: 1 / 1 / 2 / 2; 
+    display: grid;
+    place-content: center;
+  }
+
+h6{
+font-family: 'Inter';
+font-style: normal;
+font-weight: 80;
+font-size: 15px;
+background: #1E1E1E;
+color: #FFFFFF;
+}
+.conf{
+  color: green;
+  border: none;
+  background-color: black;
+
+}
+.alt{
+  color: rgb(230, 199, 121);
+  padding: 1em;
+  border: none;
+  background-color: black;
+
+}
+.altConf{
+  margin-left: 25px;
+  margin-top: 30px;
+  
+
+}
+h2{
+  color: #FFFFFF;
+  float: left;
+  font-family: 'Inter';
+  font-style: normal;
+
+}
+.sair{
+  float: right;
+  color:white;
+
+}
+.x{
+  background-color: red;
+  border-radius: 50%;
+  width: 20px;
+  color: #FFFFFF;
+  position: absolute;
+  border: none;
+}
+.alterar{
+  display: flex;
+  flex-direction: column;
+  
+}
+
+.alterar input {
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px rgb(254, 2, 2) solid;
+  background-color: black;
+
+}
+.alterar button {
+  background-color: black;
+  color: white;
+  border: none;
+  display: flex;
+  color: green;
+  flex-direction: row-reverse;
+
+}
