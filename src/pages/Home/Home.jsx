@@ -37,9 +37,9 @@ function Home() {
         <div className="container tatuadores">
           <h2 className="title-session">TATUADORES</h2>
           <div className="cards">
-            <Card nome="Felipe Moraes" contato="(16) 99923-46573" />
-            <Card nome="Lidia Souza" contato="(16) 99923-46573" />
-            <Card nome="Zoe Smith" contato="(16) 99923-46573" />
+            <Card class="img-social1" nome="Felipe Moraes" contato="(16) 99923-46573" />
+            <Card class="img-social2" nome="Lidia Souza" contato="(16) 99923-46573" />
+            <Card class="img-social3" nome="Zoe Smith" contato="(16) 99923-46573" />
           </div>
         </div>
       </section>
