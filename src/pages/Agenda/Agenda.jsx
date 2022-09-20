@@ -77,7 +77,7 @@ function Agenda() {
 
           )
         ))}  
-        </div>: <div>
+        </div>: <div  className='cardDiv'>
            {dados?.map((item) => (
             (<Card 
               id={item.ID}

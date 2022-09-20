@@ -7,6 +7,9 @@
     margin-right: 17px;
     background: #1E1E1E;
     border-radius: 20px;
+    grid-area: 1 / 1 / 2 / 2; 
+    display: grid;
+    place-content: center;
   }
 
 h6{
@@ -20,16 +23,20 @@ color: #FFFFFF;
 .conf{
   color: green;
   border: none;
+  background-color: black;
 
 }
 .alt{
   color: rgb(230, 199, 121);
   padding: 1em;
   border: none;
+  background-color: black;
+
 }
 .altConf{
   margin-left: 25px;
   margin-top: 30px;
+  
 
 }
 h2{
@@ -55,9 +62,23 @@ h2{
 .alterar{
   display: flex;
   flex-direction: column;
-  border: red solid 1px;
+  
 }
 
 .alterar input {
-  border-bottom: 1px rgb(157, 155, 155) solid;
+  border-right: none;
+  border-top: none;
+  border-left: none;
+  border-bottom: 1px rgb(254, 2, 2) solid;
+  background-color: black;
+
+}
+.alterar button {
+  background-color: black;
+  color: white;
+  border: none;
+  display: flex;
+  color: green;
+  flex-direction: row-reverse;
+
 }

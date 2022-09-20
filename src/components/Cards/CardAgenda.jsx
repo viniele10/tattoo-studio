@@ -71,6 +71,7 @@ export default function Card (props){
                     <input placeholder='ID do Tatuador' onChange={(e) => setTatuador(e.target.value)} type="text"></input>
                     <input placeholder='ID do Cliente' onChange={(e) => setCliente(e.target.value)} type="text"></input>
                     <input placeholder='Preço' onChange={(e) => setPreco(e.target.value)} type="text"></input>
+                    <br></br>
                     <button type='submit'  onClick={updateData} className='botao'> Salvar</button>
 
 

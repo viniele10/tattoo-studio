@@ -1,9 +1,14 @@
 
 .cardDiv{
-    display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
+    
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+        grid-column-gap: 100px;
+        grid-row-gap: 50px;
+        padding: 50px;
+        margin-left: 10%;
+      
 
 
 }
@@ -22,11 +27,14 @@ border-radius: 20px;
 }
 .agenda{
     min-height: 1000px;
+    background-color: black;
 }
 .ir{
-    height: 15px;
+    height: 25px;
     margin-top: 10px;
     margin-left: 10px;
     border: none;
+    color: white;
+    background-color: black;
   
 }

@@ -80,6 +80,7 @@ function Agendamento() {
     }).catch((error) => {
       console.log(error)
     })
+    alert("Agendamento realizado com sucesso!")
   };
 
   return (
