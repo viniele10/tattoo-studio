@@ -61,7 +61,6 @@ function Agenda(props) {
           <input
             placeholder="  Pesquisar"
             onChange={(e) => setId(e.target.value)}
-            // onClick={getId}
             className="pesquisar"
           ></input>
           <button
@@ -72,7 +71,6 @@ function Agenda(props) {
           </button>
         </div>
         <div className="cardDiv">
-            <div>
               {agendamento?.map((agendamento) => (
                 <Card key={agendamento?.ID}
                   id={agendamento?.ID}
@@ -84,7 +82,6 @@ function Agenda(props) {
                   preco={agendamento?.PRECO}
                 />
               ))}
-            </div>
             {!hidden ?  
             <div className="cardDiv">
               {array?.map((item) => (

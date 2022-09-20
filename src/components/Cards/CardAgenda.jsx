@@ -48,7 +48,7 @@ export default function Card (props){
         <div className='agendamentos'>
             <button onClick={() => deleteData(props.id)} className='x'>X</button>
             <div className="agenda1">
-            {!confirm ? <h2>✅ </h2> : null}
+            {!confirm ? <h2 className='confirmIcon'>✅ </h2> : null}
                 <h6>ID: {props.id}</h6>
                 <h6>Descrição: {props.descricao}</h6>
                 <h6>Data: {props.data}</h6>

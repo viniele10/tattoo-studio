@@ -81,8 +81,10 @@ h2{
   color: green;
   flex-direction: row-reverse;
 
-<<<<<<< HEAD
 }
-=======
+.container{
+  background-color: black;
 }
->>>>>>> e83cabd61d038bba75f8870f8b7b583782d7f6a1
+.confirmIcon{
+  position: absolute;
+}

@@ -6,6 +6,7 @@
   grid-row-gap: 50px;
   padding: 50px;
   margin-left: 10%;
+  background-color: black;
 }
 .pesquisar {
   width: 1000px;
@@ -20,10 +21,6 @@
   display: flex;
   justify-content: center;
 }
-.agenda {
-  min-height: 1000px;
-  background-color: black;
-}
 .ir {
   height: 25px;
   margin-top: 10px;
@@ -31,4 +28,8 @@
   border: none;
   color: white;
   background-color: black;
+}
+.bg-0{
+  height: 100vh;
+
 }
