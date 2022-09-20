@@ -1,9 +1,9 @@
 import React from "react";
 import axios from "axios";
 // import { useState } from "react";
-// import { Link } from "react-router-dom";
 import HeaderMateriais from "../../components/Header/HeaderMateriais";
 import Footer from "../../components/Footer/Footer";
+import { Buttons } from "../../components/Buttons/Buttons.jsx";
 import './Materiais.css'
 
 let fornecedor = '';
@@ -41,23 +41,19 @@ function Materiais() {
         <section className="inputPesquisar">
           <strong>MATERIAIS</strong>
           <input type="text"  name='pesquisar' id='pesquisar'  placeholder="Pesquisar..."/>
+          < Buttons/>
         </section>
 
-        <div className="parent">
-            <div >
-              <p>nanana</p>
-              <p>{fornecedor}</p>
-              <p>nanana</p>
-            </div>
-            <div className="div2"> <p>nanana</p></div>
-            <div className="div3"> <p>nanana</p></div>
-            <div className="div4"> <p>nanana</p></div>
-            <div className="div5"> <p>nanana</p></div>
-            <div className="div6"> <p>nanana</p></div>
-            <div className="div7"> </div>
-            <div className="div8"> </div>
-            <div className="div9"> </div>
-        </div>
+        <section className="parent">
+          <div className="div1"> banana</div>
+            {/* < Buttons/>  Resolver essa posição do button !!!! */}
+          <div className="div2" id="div"> banana</div>
+          <div className="div3" id="div"> banana</div>
+          <div className="div4" id="div"> banana</div>
+          <div className="div5" id="div"> banana</div>
+          <div className="div6" id="div"> banana</div>
+
+        </section>
 
         <Footer/>
   

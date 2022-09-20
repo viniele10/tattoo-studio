@@ -18,6 +18,7 @@
 .header nav li,
 nav li a {
   color: white;
+  list-style: none;
 }
 
 .header nav li:hover,

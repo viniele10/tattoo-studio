@@ -11,7 +11,8 @@ import "./styles/global.css";
 function App() {
   return (
     <div className="App">
-      {/* <header className= 'nav' >
+      {
+      /* <header className= 'nav' >
         <Link className = 'navbar' to='/'>Home</Link>
         <Link className = 'navbar' to='/agendamento'>Agendamento</Link>
         <Link className = 'navbar' to='/login'>Login</Link>
