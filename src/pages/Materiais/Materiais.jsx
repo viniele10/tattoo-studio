@@ -12,7 +12,7 @@ function Materiais() {
 
   const [materiais, setMateriais] = useState([]);
 
-  // GET
+  // GET rota
   useEffect(() => {
     axios
       .get("https://tattoo-api-squad7-resilia.herokuapp.com/materials")
@@ -58,7 +58,7 @@ function Materiais() {
             CRIAR
           </button>
         </div>
-        <div>
+        <div className="card-agendamentos">
           {materiais?.map((materiais) => (
             <Card
             key={materiais?.ID}
