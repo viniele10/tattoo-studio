@@ -11,14 +11,11 @@ import {BrowserRouter} from "react-router-dom";
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
     <BrowserRouter>
-      <App >
-        <Login>
-       </Login>
-       <Agenda>
-             <Materiais/>
-          </Agenda>
+    <App >
+        <Login/>
+        <Agenda/>
+        <Materiais/>
       </App>
-    
     </BrowserRouter>
   </React.StrictMode>
 )
