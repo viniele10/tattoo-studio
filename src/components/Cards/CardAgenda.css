@@ -1,0 +1,113 @@
+.agenda1 {
+    background: #1e1e1e;
+    border-radius: 20px;
+    padding: 1rem;
+    min-width: 350px;
+    padding-left: 2rem;
+    position: relative;
+    max-width: max-content;
+  }
+  
+  .agendamentos strong {
+    font-weight: 500;
+    color: #ffffff;
+  }
+  
+  h6 {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 80;
+    font-size: 15px;
+    color: #ffffff89;
+  }
+  .conf {
+    color: rgb(169, 235, 169);
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    background-color: #107a49;
+    padding: 0 1rem;
+    transition: all 2ms;
+    border-radius: 1rem;
+  }
+  .alt {
+    color: rgb(244, 218, 153);
+    margin-left: 1rem;
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    border: none;
+    background-color: black;
+    cursor: pointer;
+    background-color: rgba(230, 199, 121, 0.497);
+    padding: 0 1rem;
+    transition: all 2ms;
+    border-radius: 1rem;
+  }
+  .altConf {
+    margin-left: 25px;
+  }
+  
+  
+  
+  h2 {
+    color: #ffffff;
+    font-family: "Inter";
+    font-style: normal;
+  }
+  
+  .sair {
+    color: white;
+  }
+  
+  .x {
+    background-color: red;
+    border-radius: 50%;
+    width: 25px;
+    height: 26px;
+    color: #ffffff;
+    position: absolute;
+    border: none;
+    right: -0.5em;
+    top: -0.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+  
+  .alterar {
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+  }
+  
+  .alterar input {
+    border-right: none;
+    border-top: none;
+    border-left: none;
+    border-bottom: 1px rgb(196, 109, 109) solid;
+    background-color: black;
+    outline: none;
+    color: #797979;
+  }
+  
+  .alterar button {
+    color: white;
+    background-color: black;
+    border: none;
+    display: flex;
+    color: #ffffff;
+    flex-direction: row-reverse;
+    margin: 1rem 0;
+    cursor: pointer;
+  }
+  
+  
+  @media (max-width: 800px) {
+    .agenda1 {
+      min-width: 100%;
+    }
+    .alterar {
+      width: 100%;
+    }
+  }
