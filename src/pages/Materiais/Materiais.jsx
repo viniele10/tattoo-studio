@@ -1,11 +1,11 @@
 import React from 'react';
-
+import HeaderTatuador from '../../components/Header/HeaderTatuador';
 
 function Materiais () {
 
 
     return (
-        <div></div>
+        <div><HeaderTatuador nome="Voltar"/> </div>
 
     )
 }
