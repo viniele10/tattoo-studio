@@ -1,44 +1,60 @@
-.cardDiv {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 100px;
-  grid-row-gap: 50px;
-  background-color: black;
-}
-.pesquisar {
-  width: 1000px;
-  height: 50px;
-  left: 189px;
-  top: 196px;
-  background: rgba(200, 200, 200, 0.3);
-  border-radius: 20px;
+.container-agenda {
+  max-width: 1020px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+  margin-bottom: 2rem;
+  height: 100%;
 }
 
-.pesquisa {
-  display: flex;
-  justify-content: center;
+.pesquisar {
+  width: 90%;
+  height: 50px;
+  background: rgba(200, 200, 200, 0.3);
+  border-radius: 0.875rem;
+  border: none;
 }
+
+input[type="search"] {
+  padding: 0 1rem;
+  color: var(--cor-w0);
+  margin: 1rem 0;
+}
+
+input[type="search"]:focus {
+  outline: 1px solid white;
+}
+
+.pesquisa-container {
+  display: flex;
+  align-items: center;
+}
+
 .ir {
-  height: 25px;
-  margin-top: 10px;
-  margin-left: 10px;
+  display: inline-block;
+  border-radius: 0.875rem;
   border: none;
   color: white;
-  background-color: black;
+  background-color: #107a49;
+  padding: 1rem 0.7rem;
+  cursor: pointer;
+  margin-left: 0.6rem;
+  font-size: 0.875rem;
+ height: max-content;
 }
-.bg-0{
-  height: 100vh;
 
+.card-agendamentos {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 2rem auto;
 }
-.divId{
-  display: grid;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  grid-template-rows: repeat(3, 1fr);
-  grid-column-gap: 100px;
-  grid-row-gap: 50px;
-  padding: 50px;
-  margin-left: 10%;
-  background-color: black;
+
+
+@media (max-width: 800px) {
+  .card-agendamentos {
+    display: grid;
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
 }

@@ -3,7 +3,9 @@
   background-color: #212121;
   background-image: url("../../images/home-bg.jpg");
   background-position: center center;
-  background-repeat: no-repeat, no-repeat;
+			background-repeat:  no-repeat;
+			background-attachment: fixed;
+			background-size:  cover;
 }
 
 .titulo h1 {
