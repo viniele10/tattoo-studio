@@ -9,8 +9,10 @@ import HeaderTatuador from "../../components/Header/HeaderTatuador";
 
 
 function Materiais() {
+
   const [materiais, setMateriais] = useState([]);
 
+  // GET
   useEffect(() => {
     axios
       .get("https://tattoo-api-squad7-resilia.herokuapp.com/materials")
@@ -23,13 +25,14 @@ function Materiais() {
       });
   }, []);
 
-  function deleteMateriais(id) {
-    axios.delete(
-      `https://tattoo-api-squad7-resilia.herokuapp.com/materials/${id}`
-    );
+  // DELETE
+  // function deleteMateriais(id) {
+  //   axios.delete(
+  //     `https://tattoo-api-squad7-resilia.herokuapp.com/materials/${id}`
+  //   );
 
-    setClients(materiais.filter((materiais) => materiais.ID !== id));
-  }
+  //   setClients(materiais.filter((materiais) => materiais.ID !== id));
+  // }
 
   return (
     <div className="bg-0 agenda">
@@ -39,23 +42,20 @@ function Materiais() {
           {" "}
         </p>
         <h1 className="title-agendamento" style={{ color: "white" }}>
-          ► Materiais
+          Materiais
         </h1>
         <div className="pesquisa-container">
           <input
-            type="search"
-            placeholder="Pesquisar"
+            type="text"
+            placeholder="Crie um novo material:"
             onChange={(e) => setId(e.target.value)}
             className="pesquisar"
           ></input>
           <button
             className="ir"
-            onClick={() => {
-              setHidden(true);
-              getId();
-            }}
+            onClick={ console.log("create Data") }
           >
-            BUSCAR
+            CRIAR
           </button>
         </div>
         <div>

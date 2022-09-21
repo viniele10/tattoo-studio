@@ -102,7 +102,6 @@
     cursor: pointer;
   }
   
-  
   @media (max-width: 800px) {
     .agenda1 {
       min-width: 100%;

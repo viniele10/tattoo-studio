@@ -12,6 +12,7 @@ export default function Card(props) {
   const [quantidade, setQuantidade] = useState("");
   const [valor, setValor] = useState("");
 
+  // PUT
   const updateData = (e) => {
     e.preventDefault();
     axios.put(
@@ -27,11 +28,51 @@ export default function Card(props) {
     alert("Atualização concluída! Atualize a página.");
   };
 
-  const deleteData = (id) => {
+
+  // const createData = (e) => {
+  //   e.preventDefault();
+  //   axios.post(
+  //     `https://tattoo-api-squad7-resilia.herokuapp.com/material`,
+  //     {
+  //       id,
+  //       fornecedor,
+  //       produto,
+  //       quantidade,
+  //       valor,
+  //     }
+  //   );
+  //   alert("Material Criado! Atualize a página.");
+  // };
+
+  // const postData = (e) => {
+  //   setId(id);
+  //   let cliente_id = id;
+  //   e.preventDefault();
+
+  //   axios.post(
+  //     `https://tattoo-api-squad7-resilia.herokuapp.com/material`,
+  //     {
+  //       ID,
+  //       FORNECEDOR,
+  //       PRODUTO,
+  //       QUANTIDADE,
+  //       VALOR
+  //     } 
+  //   ).then((res) => {
+  //     console.log(res.data)
+  //   }).catch((error) => {
+  //     console.log(error)
+  //   })
+  // };
+
+
+
+
+  const deleteMaterial = (id) => {
     axios.delete(
       `https://tattoo-api-squad7-resilia.herokuapp.com/material/${id}`
     );
-    alert("Usuário deletado! Atualize a página.");
+    alert("Material deletado! Atualize a página.");
   };
 
   console.log(hidden);
@@ -55,7 +96,7 @@ export default function Card(props) {
         <h6>
           <strong>Valor:</strong> {props.valor}
         </h6>
-        <button onClick={() => deleteData(props.id)} className="x">
+        <button onClick={() => deleteMaterial(props.id)} className="x">
           X
         </button>
       </div>

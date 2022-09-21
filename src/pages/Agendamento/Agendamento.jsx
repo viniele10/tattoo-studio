@@ -50,37 +50,7 @@ function Agendamento() {
 
   id = clients.length + 1
 
-  const postData = (e) => {
-    setId(id);
-    let cliente_id = id;
-    e.preventDefault();
-    axios.post(`https://tattoo-api-squad7-resilia.herokuapp.com/clients`, {
-      id,
-      name,
-      contact,
-      age,
-      city,
-    }).then((res) => {
-      console.log(res.data)
-    }).catch((error) => {
-      console.log(error)
-    });
-    axios.post(
-      `https://tattoo-api-squad7-resilia.herokuapp.com/agendamento/${tatuador}/${cliente_id}`,
-      {
-        descricao,
-        data,
-        horario,
-        tatuador,
-        cliente_id,
-        preco,
-      } 
-    ).then((res) => {
-      console.log(res.data)
-    }).catch((error) => {
-      console.log(error)
-    })
-  };
+
 
   return (
     <div className="bg-01">
