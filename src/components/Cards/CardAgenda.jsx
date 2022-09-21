@@ -51,13 +51,13 @@ export default function Card(props) {
     <div className="agendamentos">
       <div className="agenda1">
         {!confirm ? <h2>✅ </h2> : null}
-        <h6>ID: {props.id}</h6>
-        <h6>Descrição: {props.descricao}</h6>
-        <h6>Data: {props.data}</h6>
-        <h6>Horário: {props.horario}</h6>
-        <h6>ID do Tatuador: {props.tatuador_id}</h6>
-        <h6>ID do cliente: {props.cliente_id}</h6>
-        <h6>Preço: {props.preco}</h6>
+        <h6><strong>ID:</strong> {props.id}</h6>
+        <h6><strong>Descrição:</strong> {props.descricao}</h6>
+        <h6><strong>Data:</strong> {props.data}</h6>
+        <h6><strong>Horário:</strong> {props.horario}</h6>
+        <h6><strong>ID do Tatuador:</strong> {props.tatuador_id}</h6>
+        <h6><strong>ID do cliente:</strong> {props.cliente_id}</h6>
+        <h6><strong>Preço:</strong> {props.preco}</h6>
         <button onClick={() => deleteData(props.id)} className="x">
           X
         </button>

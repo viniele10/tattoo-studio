@@ -57,7 +57,7 @@ function Agenda(props) {
       <HeaderTatuador nome="Voltar" />
       <div className="container-agenda">
         <p id="menutatuador" style={{ color: "white" }}> {props.nome}</p>
-        <h1 style={{ color: "white" }}>► Agendamentos</h1>
+        <h1 className="title-agendamento" style={{ color: "white" }}>► Agendamentos</h1>
         <div className="pesquisa-container">
           <input
             type="search"

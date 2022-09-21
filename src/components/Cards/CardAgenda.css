@@ -8,31 +8,46 @@
   max-width: max-content;
 }
 
+.agendamentos strong {
+  font-weight: 500;
+  color: #ffffff;
+}
+
 h6 {
   font-family: "Inter";
   font-style: normal;
   font-weight: 80;
   font-size: 15px;
-  color: #ffffff;
+  color: #ffffff89;
 }
 .conf {
-  color: green;
+  color: rgb(169, 235, 169);
   border: none;
   background-color: black;
   cursor: pointer;
+  background-color: #107a49;
+  padding: 0 1rem;
+  transition: all 2ms;
+  border-radius: 1rem;
 }
 .alt {
-  color: rgb(230, 199, 121);
+  color: rgb(244, 218, 153);
   margin-left: 1rem;
   margin-top: 1rem;
   margin-bottom: 1rem;
   border: none;
   background-color: black;
   cursor: pointer;
+  background-color: rgba(230, 199, 121, 0.497);
+  padding: 0 1rem;
+  transition: all 2ms;
+  border-radius: 1rem;
 }
 .altConf {
   margin-left: 25px;
 }
+
+
 
 h2 {
   color: #ffffff;
@@ -70,7 +85,7 @@ h2 {
   border-right: none;
   border-top: none;
   border-left: none;
-  border-bottom: 1px rgb(254, 2, 2) solid;
+  border-bottom: 1px rgb(196, 109, 109) solid;
   background-color: black;
   outline: none;
   color: #797979;
@@ -81,7 +96,7 @@ h2 {
   background-color: black;
   border: none;
   display: flex;
-  color: green;
+  color: #ffffff;
   flex-direction: row-reverse;
   margin: 1rem 0;
   cursor: pointer;
