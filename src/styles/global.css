@@ -16,12 +16,14 @@
 
 
 .container {
+  max-width: 1250px; 
   padding: 1rem 2rem;
   margin: 0 auto;
 }
 
 body {
     font-family: var(--font-family);
+    background: #000;
 }
 
 
