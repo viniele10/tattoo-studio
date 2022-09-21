@@ -76,6 +76,7 @@ function Agendamento() {
       } 
     ).then((res) => {
       console.log(res.data)
+      alert('Agendamento efetuado com sucesso!')
     }).catch((error) => {
       console.log(error)
     })

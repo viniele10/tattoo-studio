@@ -6,6 +6,7 @@ import Card from "../../components/Cards/CardAgenda";
 import "./Agenda.css";
 
 import HeaderTatuador from "../../components/Header/HeaderTatuador";
+import Footer from "../../components/Footer/Footer";
 
 function Agenda(props) {
   const [dados, setDados] = React.useState([]);
@@ -51,44 +52,51 @@ function Agenda(props) {
     }
   });
 
-
   return (
-    <div className="bg-0">
+    <div className="bg-0 agenda">
       <HeaderTatuador nome="Voltar" />
-      <div className="container">
-        <h1 style={{ color: "white" }}>{props.nome}</h1>
-        <div className="pesquisa">
+      <div className="container-agenda">
+        <p id="menutatuador" style={{ color: "white" }}> {props.nome}</p>
+        <h1 style={{ color: "white" }}>► Agendamentos</h1>
+        <div className="pesquisa-container">
           <input
-            placeholder="  Pesquisar"
+            type="search"
+            placeholder="Pesquisar"
             onChange={(e) => setId(e.target.value)}
-            // onClick={getId}
             className="pesquisar"
-          ></input>
+          >
+
+          </input>
           <button
             className="ir"
-            onClick={() => {setHidden(true); getId()}}
+            onClick={() => {
+              setHidden(true);
+              getId();
+            }}
           >
-            IR
+            BUSCAR
           </button>
         </div>
-        <div className="cardDiv">
-            <div>
-              {agendamento?.map((agendamento) => (
-                <Card key={agendamento?.ID}
-                  id={agendamento?.ID}
-                  descricao={agendamento?.DESCRICAO}
-                  data={agendamento?.DATA}
-                  horario={agendamento?.HORARIO}
-                  tatuador_id={agendamento?.TATUADOR_ID}
-                  cliente_id={agendamento?.CLIENTE_ID}
-                  preco={agendamento?.PRECO}
-                />
-              ))}
-            </div>
-            {!hidden ?  
-            <div className="cardDiv">
+        <div>
+          <div>
+            {agendamento?.map((agendamento) => (
+              <Card
+                key={agendamento?.ID}
+                id={agendamento?.ID}
+                descricao={agendamento?.DESCRICAO}
+                data={agendamento?.DATA}
+                horario={agendamento?.HORARIO}
+                tatuador_id={agendamento?.TATUADOR_ID}
+                cliente_id={agendamento?.CLIENTE_ID}
+                preco={agendamento?.PRECO}
+              />
+            ))}
+          </div>
+          {!hidden ? (
+            <div className="card-agendamentos">
               {array?.map((item) => (
-                <Card key={item?.ID}
+                <Card
+                  key={item?.ID}
                   id={item?.ID}
                   descricao={item?.DESCRICAO}
                   data={item?.DATA}
@@ -97,10 +105,14 @@ function Agenda(props) {
                   cliente_id={item?.CLIENTE_ID}
                   preco={item?.PRECO}
                 />
-              ))} 
-            </div> : '' } 
+              ))}
+            </div>
+          ) : (
+            ""
+          )}
         </div>
       </div>
+      <Footer />
     </div>
   );
 }
