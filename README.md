@@ -78,4 +78,5 @@ $ <http://localhost:5173>
 - [Ellen Maria](https://github.com/ellenmariadev/)
 - [Larissa Ferreira](https://github.com/Lari-Ferreira)
 - [Leonardo Iplinsky](https://github.com/IplinskyLeo)
+- [Matheus Hage](https://github.com/matheushage)
 - [Viniele Lopes](https://github.com/vinielelopes)
