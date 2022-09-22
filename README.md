@@ -42,7 +42,7 @@ Exibe a tela de gerenciamento do tatuador, com as opções de acessar a agenda e
 #
 
 ### 🌐 Deploy
-[MELLV - Tattoo Studio](https://i.ibb.co/TgfVt9c/Style-Guide.png)
+[MELLV - Tattoo Studio](https://tattoo-studio-xi.vercel.app/)
 
 #
  
